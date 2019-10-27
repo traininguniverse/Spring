@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>Results:</h1>
+	<span th:text="'name: ' + ${person.name}" ></span><br><br>
+	<span th:text="'yob: ' + ${person.yob}" /></span><br><br>
+	<span th:text="'Gender: ' + ${person.gender}" /></span><br><br>
+	<span th:text="'Ciało: ' + ${person.body}" /></span><br><br>
+	Hobby:<br>
+	<tr th:each="hobby : ${person.hobby}">
+		<td><span th:text="${hobby}"></span></td>
+	</tr>
+	<br><br>Data urodzin:<br>
+	<span th:text="${person.getBirthdayS()	}" ></span><br><br>
+	<a href="/person">Another submitting</a>
+</body>
+</html>
